@@ -1,0 +1,73 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddOrEditScript" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" >
+
+        <TextView
+            android:id="@+id/txtScriptType"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scriptTypeSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/scriptTypeSpinner"
+            android:gravity="center_vertical"
+            android:text="@string/scriptType" />
+
+        <Spinner
+            android:id="@+id/scriptTypeSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtScriptType"
+            android:spinnerMode="dropdown" >
+        </Spinner>
+
+        <TextView
+            android:id="@+id/txtScriptName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtScriptType"
+            android:layout_below="@+id/txtScriptType"
+            android:layout_marginTop="21dp"
+            android:text="@string/scriptName" />
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtScriptName"
+            android:layout_alignBottom="@+id/txtScriptName"
+            android:layout_alignLeft="@+id/scriptTypeSpinner"
+            android:ems="10"
+            android:inputType="text" >
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/scriptConfigContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtScriptName"
+            android:layout_below="@+id/inputName"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cmdSaveConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scriptConfigContainer"
+            android:layout_marginTop="10dp"
+            android:text="@string/saveConfig" />
+    </RelativeLayout>
+</ScrollView>

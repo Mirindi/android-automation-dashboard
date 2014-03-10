@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cristi8.automationdashboard"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.WithActionBar" >
+        <activity
+            android:name="com.cristi8.automationdashboard.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.WithActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cristi8.automationdashboard.AboutActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.cristi8.automationdashboard.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.WithActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cristi8.automationdashboard.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cristi8.automationdashboard.AddOrEditScript"
+            android:label="@string/title_activity_add_or_edit_script"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cristi8.automationdashboard.MainActivity"
+            android:theme="@android:style/Theme.WithActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cristi8.automationdashboard.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
